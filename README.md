@@ -44,13 +44,24 @@ Sistema de gestión de reservas para espacios de coworking desarrollado con Lara
 ## Instalación
 
 ### 1. Clonar el repositorio
+### Links
+📌 Live site URL: [here](https://github.com/Tonyva002/coworking)
 
-```bash
-git clone https://github.com/Labarta/coworking-system.git
-cd coworking-system
-```
+### 2. Instalar PHP
+a) 📌 Live site URL: [here](https://windows.php.net/download)
+descarga el .zip.
+Ejemplo: php-8.2.18-Win32-vs16-x64.zip
 
-### 2. Instalar dependencias de PHP
+b) Extrae el contenido en una carpeta, por ejemplo: C:\php
+
+c) En “Variables del sistema” selecciona Path y haz clic en Editar
+
+d) Haz clic en Nuevo y agrega: C:\php
+
+e) En C:\php busca el archivo php.ini-development y renómbralo a php.ini
+
+
+### 2. Instalar dependencias de PHP, en la terminal de vsc
 
 ```bash
 composer install
@@ -58,7 +69,7 @@ composer install
 
 ### 3. Configurar el entorno
 
-Copiar el archivo de ejemplo de entorno y generar la clave de la aplicación:
+Copiar el archivo de ejemplo de entorno y generar la clave de la aplicación: ejecutalo en la terminal de vsc
 
 ```bash
 cp .env.example .env
@@ -86,13 +97,13 @@ Crea una base de datos MySQL con el nombre especificado en la configuración:
 CREATE DATABASE cowork_reservation CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-### 6. Ejecutar las migraciones y seeders
+### 6. Ejecutar las migraciones y seeders, en la terminal de vsc
 
 ```bash
 php artisan migrate --seed
 ```
 
-### 7. Compilar los assets
+### 7. Compilar los assets,  en la terminal de vsc
 
 ```bash
 npm install
@@ -105,7 +116,7 @@ O para producción:
 npm run build
 ```
 
-### 8. Iniciar el servidor de desarrollo
+### 8. Iniciar el servidor de desarrollo,  en la terminal de vsc
 
 ```bash
 php artisan serve
@@ -141,10 +152,8 @@ Para configurar el proyecto en un nuevo equipo, sigue estos pasos detallados:
 ### Pasos de configuración
 
 1. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/Labarta/coworking-system.git
-   cd coworking-system
-   ```
+
+   Live site URL: [here](https://github.com/Tonyva002/coworking)
 
 2. **Instalar dependencias de PHP**
    ```bash
@@ -211,9 +220,40 @@ La aplicación viene con los siguientes usuarios predefinidos:
 - **Cliente**:
   - Email: cliente@cowork.com
   - Contraseña: password
+ 
+ ## Imagenes
 
-## Licencia
+  1)  ![image](https://github.com/user-attachments/assets/9c2eb4b3-f695-4fa8-b202-5952e5fd0506)
 
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+  2)  ![image](https://github.com/user-attachments/assets/d06cb3b1-864a-4fda-90e8-4fb540dd0d6a)
 
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+  3)  ![image](https://github.com/user-attachments/assets/331ef73e-73b3-4632-af3f-66e13fedd1e7)
+
+  4)  ![image](https://github.com/user-attachments/assets/a2ba31d6-2c04-4d24-939c-3ad4d5a2a266)
+
+  5)  ![image](https://github.com/user-attachments/assets/eb48bee7-76ec-4109-963d-a39683c458e2)
+
+  6)  ![image](https://github.com/user-attachments/assets/9e7c54cb-608f-417b-b55b-fa7cb3fe342a)
+
+
+
+
+
+
+### Author:
+
+Tony Vasquez Arias
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
