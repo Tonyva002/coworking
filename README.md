@@ -52,22 +52,35 @@ a) 📌 Live site URL: [here](https://windows.php.net/download)
 descarga el .zip.
 Ejemplo: php-8.2.18-Win32-vs16-x64.zip
 
-b) Extrae el contenido en una carpeta, por ejemplo: C:\php
+b) Extrae el contenido en una carpeta, copialo y pega el contenido en una carpeta en esta direccion: C:\php
 
 c) En “Variables del sistema” selecciona Path y haz clic en Editar
 
-d) Haz clic en Nuevo y agrega: C:\php
+d) Haz clic en Nuevo y agrega la ruta de tu capeta php:  C:\php
 
 e) En C:\php busca el archivo php.ini-development y renómbralo a php.ini
 
+f) Abre el archivo php.ini en vsc y asegúrate de tener las siguientes extensiones habilitadas, busca la extension en el archivo y quitarle el punto y coma (;) para habilitarlas.
+    
+extension_dir = "ext"
+extension=curl
+extension=fileinfo
+extension=gd
+extension=zip
+extension=mbstring
+extension=mysqli
+extension=openssl
+extension=pdo_mysql
 
-### 2. Instalar dependencias de PHP, en la terminal de vsc
+
+
+### 3. Instalar dependencias de PHP, en la terminal de vsc
 
 ```bash
 composer install
 ```
 
-### 3. Configurar el entorno
+### 4. Configurar el entorno
 
 Copiar el archivo de ejemplo de entorno y generar la clave de la aplicación: ejecutalo en la terminal de vsc
 
@@ -76,7 +89,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### 4. Configurar la base de datos
+### 5. Configurar la base de datos
 
 Editar el archivo `.env` con los datos de conexión a tu base de datos MySQL:
 
@@ -89,7 +102,7 @@ DB_USERNAME=tu_usuario
 DB_PASSWORD=tu_contraseña
 ```
 
-### 5. Crear la base de datos
+### 6. Crear la base de datos
 
 Crea una base de datos MySQL con el nombre especificado en la configuración:
 
@@ -97,13 +110,13 @@ Crea una base de datos MySQL con el nombre especificado en la configuración:
 CREATE DATABASE cowork_reservation CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-### 6. Ejecutar las migraciones y seeders, en la terminal de vsc
+### 7. Ejecutar las migraciones y seeders, en la terminal de vsc
 
 ```bash
 php artisan migrate --seed
 ```
 
-### 7. Compilar los assets,  en la terminal de vsc
+### 8. Compilar los assets,  en la terminal de vsc
 
 ```bash
 npm install
@@ -116,7 +129,7 @@ O para producción:
 npm run build
 ```
 
-### 8. Iniciar el servidor de desarrollo,  en la terminal de vsc
+### 9. Iniciar el servidor de desarrollo,  en la terminal de vsc
 
 ```bash
 php artisan serve
